@@ -2,17 +2,17 @@
 
 
 subcategory-one:
-  name: Subcategory One
-  parent-category: using-subcategories
-  parent-category-name: Using Subcategories
-  description: This is your first subcategory!
+  name: Creator Kit
+  parent-category: consoles
+  parent-category-name: Consoles
+  description: Creator Kit
 subcategory-two:
-  name: Subcategory Two
-  parent-category: using-subcategories
-  parent-category-name: Using Subcategories
-  description: This is your second subcategory!
+  name: Soldering Kit
+  parent-category: consoles
+  parent-category-name: Consoles
+  description: Soldering Kit
 subcategory-three:
-  name: Subcategory Three
-  parent-category: using-subcategories
-  parent-category-name: Using Subcategories
-  description: This is your third subcategory!
+  name: Breadboard Version
+  parent-category: consoles
+  parent-category-name: Consoles
+  description: Breadboard Version

@@ -21,8 +21,10 @@
   }
   h5 {
     font-family:'Inconsolata', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
     color: $gray-color-dark;
-    margin: -35px 0;
+    margin: 20px 0;
     line-height: 1.5em;
   }
   button {

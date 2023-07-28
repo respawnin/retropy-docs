@@ -2,9 +2,9 @@
 layout: post
 title: "Subcategory Post"
 date: 2019-11-05 08:44:38 -0400
-category: subcategory-one
-subcategory: 
-author: mac
+category: consoles
+subcategory: soldering-kit
+author: retrocat
 short-description: A quick overview of Odin to get you started
 ---
 

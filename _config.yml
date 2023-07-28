@@ -24,7 +24,7 @@ baseurl: /retropy-docs # the subpath of your site, e.g. /support
 url: https://respawnin.github.io # the base hostname AND PROTOCOL for your site, e.g. http://example.com
 permalink: /:categories/:title
 
-content_type: Knowledge Base #Define whether this is a knowledge base, help center, or something else
+content_type: Docs #Define whether this is a knowledge base, help center, or something else
 use_authors: true #Set this to false to disable showing post authors
 
 brand_logo: logo.png

@@ -1,17 +1,17 @@
 #Tihs file defines all categories that live within a parent category
 
 
-subcategory-one:
+creator-kit:
   name: Creator Kit
   parent-category: consoles
   parent-category-name: Consoles
   description: Creator Kit
-subcategory-two:
+soldering-kit:
   name: Soldering Kit
   parent-category: consoles
   parent-category-name: Consoles
   description: Soldering Kit
-subcategory-three:
+breadboard:
   name: Breadboard Version
   parent-category: consoles
   parent-category-name: Consoles

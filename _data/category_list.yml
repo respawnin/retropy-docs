@@ -1,12 +1,12 @@
 #This file defines all the categories you are using
 
 
-using-subcategories:
-  name: Using Subcategories
-  description: Learn to use subcategories!
-using-odin:
-  name: Using Odin
-  description: Welcome to Odin, time to get started
-customizing-odin:
-  name: Customizing Odin
-  description: Welcome to Odin, time to get started
+consoles:
+  name: Consoles
+  description: Documentation & Build Guides for the retroPy rp2040 game consoles.
+game-engine:
+  name: Game Engine
+  description: API references and tutorials for the retroPy microPython game engine
+apps:
+  name: Apps
+  description: Usage guides for the apps that help with retro game creation

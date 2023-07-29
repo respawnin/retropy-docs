@@ -4,8 +4,10 @@
 
 .header-bg-img {
   background-image: url("../assets/retropy-docs_CAT_Banner_ODIN.png");
+  background-repeat: no-repeat;
   background-color: $primary-color;
-  min-height: 340px;
+  align-items: center;
+  min-height: 425px;
 }
 
 .nav-gradient {

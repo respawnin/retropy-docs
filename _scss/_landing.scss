@@ -3,7 +3,7 @@
 }
 
 .header-bg-img {
-  background-image: url("../assets/retropy-docs_CAT_Banner_ODIN.png");
+  background-image: url("../assets/retropy-docs_Banner.png");
   background-repeat: no-repeat;
   background-color: $primary-color;
   background-position: center;
@@ -26,7 +26,7 @@
     font-size: larger;
     font-weight: bold;
     color: $gray-color-dark;
-    margin: -25px 0;
+    margin: -35px 120px 0px -120px;
     line-height: 1.5em;
   }
   button {

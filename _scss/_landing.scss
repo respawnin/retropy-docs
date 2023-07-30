@@ -46,7 +46,6 @@ $shadow: rgba(0,0,0,0.1);
 
 $px: 4px;
 
-
 $bubble-border: 0 -1*$px $white, 
 		0 -2*$px $black, 
 		$px 0 $white, 
@@ -61,7 +60,7 @@ $bubble-border: 0 -1*$px $white,
 		$px $px $black;
 
 .bubble {
-	position: center;
+	position: relative;
 	display: inline-block;
 	margin: 5*$px;
 	text-align: center;

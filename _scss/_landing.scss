@@ -38,6 +38,86 @@
 
       
 }
+/*************************************************************************************************************/
+//speech bubble generator
+$black: #000;
+$white: #fff;
+$shadow: rgba(0,0,0,0.1);
+
+$px: 4px;
+
+body {
+	background-color:#6e6565;
+	padding: 60px;
+}
+
+$bubble-border: 0 -1*$px $white, 
+		0 -2*$px $black, 
+		$px 0 $white, 
+		$px -1*$px $black, 
+		2*$px 0 $black, 
+		0 $px $white, 
+		0 2*$px $black, 
+		-1*$px 0 $white, 
+		-1*$px  $px $black, 
+		-2*$px 0 $black, 
+		-1*$px -1*$px $black, 
+		$px $px $black;
+
+.bubble {
+	position: relative;
+	display: inline-block;
+	margin: 5*$px;
+	text-align: center;
+	font-family: 'VK323', cursive;
+	font-size: 16px;
+	line-height:1.3em;
+	// letter-spacing: -0.04em;
+	background-color: $white;
+	color: $black;
+	padding: 3*$px;
+	box-shadow: $bubble-border;
+		
+	box-sizing: border-box;
+	width:200px;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		box-sizing: border-box;	
+	}
+	
+	&.shadow { box-shadow: $bubble-border, $px 3*$px $shadow, 3*$px $px $shadow, 2*$px 2*$px $shadow; }
+	
+	&.mini { width:110px; font-size: 16px; padding: 4px; font-family: monospace; }
+
+	&.grow { width:initial; }
+
+	&.bottom::after {
+		height: $px;
+		width: $px;
+		bottom: -2*$px;
+		left: 8*$px;
+		box-shadow: 
+			0 $px $black, 
+			0 2*$px $black, 
+			0 3*$px $black, 
+			0 4*$px $black, 
+			-1*$px 3*$px $black, 
+			-2*$px 2*$px $black, 
+			-3*$px 1*$px $black, 
+			-1*$px $px $white, 
+			-2*$px $px $white, 
+			-1*$px 2*$px $white, 
+			-1*$px 0 $white, 
+			-2*$px 0 $white, 
+			-3*$px 0 $white;
+	}
+
+}
+
+/*************************************************************************************************************/
 
 .overview {
   background: $gray-color-light;

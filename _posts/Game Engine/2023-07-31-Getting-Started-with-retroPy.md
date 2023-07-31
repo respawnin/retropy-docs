@@ -21,29 +21,36 @@ The retroPy hardware can be **breadboarded**, **soldered**, or purchased as a **
  1. If you've got your hands on a **retroPy console** or **made your own**, great! 
  2. Ensure you have [Thonny](https://thonny.org/) (available on Windows/Mac/Linux) installed (Thonny installation guide here).
 
-### Let's get started!
+#### Let's get started!
 
 
 Plug in your retroPy console using a USB cable.
+
 ![Select retroPy MicroPython in Thonny](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-micropython.png)
+
 Launch Thonny and make sure to select retroPy by clicking the bottom right hand corner.
 ![\Thonny screenshot with shell\]](https://github.com/respawnin/retropy-docs/blob/main/assets/basics/thonny-shell.PNG?raw=true)
+
 You should see something like this in the shell that mentions the MicroPython & retroPy version.
 
 > If you don't, it means you'll need to **install the game engine firmware first**. 
 
 ![\[Thonny Screenshot with files\]](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-files.png)
+
 We will also need to see the files in our console, so go to **View > Files** to enable it *(Sorry, VSCode people)*. 
 The top part of the file directory points to the files in our PC, the bottom shows the files in the retroPy.
 
 In the root directory of retroPy, double click on `GetStarted.py` to open it up.
 Let's run the file to see what this code does.
-Press F5 or click on the green play button on the toolbar to run the code.
+
 ![Thonny Toolbar](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-toolbar.png)
+
+Press F5 or click on the green play button on the toolbar to run the code.
+
 #### Hello World!
 Getting "Hello World!" to display on the screen is as simple as 2 lines of code (Lines 7 & 8).
 ![retroPy Hello World Example](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/HelloWorld.png)
-```python linenos
+{% highlight python linenos %}
 from retroPy import rpy
 
 def update(dt):
@@ -56,10 +63,10 @@ def draw():
 
 #================================================================================
 rpy.run(update, draw)  
-```
+{% endhighlight %}
 
 On ==line 7==, we'll need to clear the screen before we start drawing anything on it. Here, we're clearing the entire screen with colour index 1 (Dark Blue).
-[insert image of colour palette here]
+
 On ==line 8==, we'll use the text command to indicate the string of text we want to display, its top left (X,Y) starting position, followed by the colour of the text (colour Index 7 is white).
 By default, the text is a monospace font of size 16x16 pixels.
 
@@ -74,11 +81,12 @@ Other than lines 7 & 8, everything else is the bare minimum required for an empt
 
 #### Let's draw a red ball!
 Add the following line under the `draw` function
-``` python 
+{% highlight python linenos %}
 
 rpy.filled_circle(50, 50, 12, 8)
 
-```
+{% endhighlight %}
+
 The `filled_circle` command takes 4 parameters -  `( radius, center-x, center-y, colour)`
 
 Stop the current code that is running by clicking the stop/reset button.

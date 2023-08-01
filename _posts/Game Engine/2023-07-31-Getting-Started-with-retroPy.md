@@ -26,6 +26,7 @@ The retroPy hardware can be **breadboarded**, **soldered**, or purchased as a **
 
 Plug in your retroPy console using a USB cable.
 Launch Thonny and make sure to select retroPy by clicking the bottom right hand corner, and selecting any MicroPython option
+
 ![Select retroPy MicroPython in Thonny](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-micropython.png)
 
 You should see something like this in the shell that mentions the MicroPython & retroPy version.

@@ -25,20 +25,19 @@ The retroPy hardware can be **breadboarded**, **soldered**, or purchased as a **
 
 
 Plug in your retroPy console using a USB cable.
-
+Launch Thonny and make sure to select retroPy by clicking the bottom right hand corner, and selecting any MicroPython option
 ![Select retroPy MicroPython in Thonny](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-micropython.png)
 
-Launch Thonny and make sure to select retroPy by clicking the bottom right hand corner.
+You should see something like this in the shell that mentions the MicroPython & retroPy version.
 ![\Thonny screenshot with shell\]](https://github.com/respawnin/retropy-docs/blob/main/assets/basics/thonny-shell.PNG?raw=true)
 
-You should see something like this in the shell that mentions the MicroPython & retroPy version.
+> If you don't, check the USB connections and press the reset button for > 2s and try again. If you've  DIY-ed a retroPy, ensure you have **installed the game engine firmware first**. 
 
-> If you don't, it means you'll need to **install the game engine firmware first**. 
 
-![\[Thonny Screenshot with files\]](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-files.png)
-
-We will also need to see the files in our console, so go to **View > Files** to enable it *(Sorry, VSCode people)*. 
-The top part of the file directory points to the files in our PC, the bottom shows the files in the retroPy.
+|       |      |
+|:----|:----|
+| ![\[Thonny Screenshot with files\]](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-files.png) | We will also need to see the files in our console, so go to **View > Files** to enable it *(Sorry, VSCode people)*. The top part of the file directory points to the files in our PC, the bottom shows the files in the retroPy. |
+|       |      |
 
 In the root directory of retroPy, double click on `GetStarted.py` to open it up.
 Let's run the file to see what this code does.
@@ -50,6 +49,7 @@ Press F5 or click on the green play button on the toolbar to run the code.
 #### Hello World!
 Getting "Hello World!" to display on the screen is as simple as 2 lines of code (Lines 7 & 8).
 ![retroPy Hello World Example](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/HelloWorld.png)
+
 {% highlight python linenos %}
 from retroPy import rpy
 
@@ -61,7 +61,7 @@ def draw():
     rpy.text("Hello World!", 75, 100, 7)
     pass
 
-#================================================================================
+#======================================================================
 rpy.run(update, draw)  
 {% endhighlight %}
 
@@ -81,6 +81,7 @@ Other than lines 7 & 8, everything else is the bare minimum required for an empt
 
 #### Let's draw a red ball!
 Add the following line under the `draw` function
+
 {% highlight python linenos %}
 
 rpy.filled_circle(50, 50, 12, 8)
@@ -101,7 +102,7 @@ Now we can Press F5 to run the updated code/ click on the play button.
 - Check out the next part of the tutorial here! We'll get things moving (quite literally)
 
 ## Further Reading
-- There are even more tutorials here *(Tutorials are added in periodically when the devs aren't too overwhelmed ;} )*
+- There are even more tutorials here *(Tutorials are added in periodically when the devs aren't too overwhelmed ;] )*
 - Check out how the games that are included with the retroPy are written. Learn and modify them to create your own variant of the game. (Make sure to make back ups of the original, just in case)
 - Go "window shopping" for assets. Check out the standard assets that come with retroPy and get inspiration to use them in your own games.
 - Make your own pixel art animation! retroPy is great not just for games, but for pixel art animations to prop up as a display on your desktop setup. 

@@ -39,7 +39,7 @@ $error: #fa5246 !default;
 
 
 // Other colors
-$code-color: #d73e48 !default;
+$code-color: #6824b1 !default;
 $highgray-color-light: #ffe9b3 !default;
 $body-bg: $gray-color-light !default;
 $body-font-color: lighten($dark-color, 5%) !default;
@@ -49,9 +49,9 @@ $link-color-light: lighten($link-color, 10%) !default;
 
 // Fonts
 // Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-$base-font-family: "Inconsolata", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$base-font-family: "Inconsolata", -apple-system, system-ui, BlinkMacSystemFont, Roboto !default;
 $serif-font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-$mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
+$mono-font-family: "SF Mono", Menlo, Courier, monospace !default;
 $fallback-font-family: "Helvetica Neue", sans-serif !default;
 $cjk-zh-hans-font-family: $base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", $fallback-font-family !default;
 $cjk-zh-hant-font-family: $base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", $fallback-font-family !default;
@@ -59,7 +59,7 @@ $cjk-jp-font-family: $base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic P
 $cjk-ko-font-family: $base-font-family, "Malgun Gothic", $fallback-font-family !default;
 $body-font-family: $base-font-family !default;
 
-$header-font-family: "Overlock+SC", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$header-font-family: "Overlock+SC", -apple-system, system-ui, BlinkMacSystemFont, Roboto !default;
 
 // Unit sizes
 $unit-o: .05rem !default;

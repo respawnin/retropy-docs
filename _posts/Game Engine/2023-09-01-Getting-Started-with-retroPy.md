@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting started with retroPy"
-date: 2030-07-31 22:59:38 +0800
+date: 2023-09-01 00:00:00 +0800
 category: game-engine
 author: retrocat
 short-description: Getting started with retroPy

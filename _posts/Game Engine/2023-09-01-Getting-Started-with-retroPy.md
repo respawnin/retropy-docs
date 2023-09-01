@@ -35,11 +35,13 @@ You should see something like this in the shell that mentions the MicroPython & 
 
 > If you don't, check the USB connections and press the reset button for > 2s and try again. If you've  DIY-ed a retroPy, ensure you have **installed the game engine firmware first**. 
 
+We will also need to see the files in our console, so go to **View > Files** to enable it *(Sorry, VSCode people)*. 
+The top part of the file directory points to the files in our PC, the bottom shows the files in the retroPy. 
 
- ![\[Thonny Screenshot with files\]](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-files.png) 
-  We will also need to see the files in our console, so go to **View > Files** to enable it *(Sorry, VSCode people)*. The top part of the file directory points to the files in our PC, the bottom shows the files in the retroPy. 
+![\[Thonny Screenshot with files\]](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-files.png)
 
 In the root directory of retroPy, double click on `GetStarted.py` to open it up.
+
 Let's run the file to see what this code does.
 
 ![Thonny Toolbar](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-toolbar.png)

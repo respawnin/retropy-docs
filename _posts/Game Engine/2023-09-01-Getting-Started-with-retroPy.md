@@ -36,10 +36,8 @@ You should see something like this in the shell that mentions the MicroPython & 
 > If you don't, check the USB connections and press the reset button for > 2s and try again. If you've  DIY-ed a retroPy, ensure you have **installed the game engine firmware first**. 
 
 
-|       |      |
-|:----|:----|
-| ![\[Thonny Screenshot with files\]](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-files.png) | We will also need to see the files in our console, so go to **View > Files** to enable it *(Sorry, VSCode people)*. The top part of the file directory points to the files in our PC, the bottom shows the files in the retroPy. |
-|       |      |
+ ![\[Thonny Screenshot with files\]](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-files.png) 
+  We will also need to see the files in our console, so go to **View > Files** to enable it *(Sorry, VSCode people)*. The top part of the file directory points to the files in our PC, the bottom shows the files in the retroPy. 
 
 In the root directory of retroPy, double click on `GetStarted.py` to open it up.
 Let's run the file to see what this code does.
@@ -69,9 +67,9 @@ def draw():
 rpy.run(update, draw)  
 {% endhighlight %}
 
-On 	:yellow_square:line 7:yellow_square:, we'll need to clear the screen before we start drawing anything on it. Here, we're clearing the entire screen with colour index 1 (Dark Blue).
+On ***line 7***, we'll need to clear the screen before we start drawing anything on it. Here, we're clearing the entire screen with colour index 1 (Dark Blue).
 
-On 	:yellow_square:line 8:yellow_square:, we'll use the text command to indicate the string of text we want to display, its top left (X,Y) starting position, followed by the colour of the text (colour Index 7 is white).
+On ***line 8***, we'll use the text command to indicate the string of text we want to display, its top left (X,Y) starting position, followed by the colour of the text (colour Index 7 is white).
 By default, the text is a monospace font of size 16x16 pixels.
 
 Other than lines 7 & 8, everything else is the bare minimum required for an empty project (A copy of it called `Empty.py` can be found in the retroPy directory).

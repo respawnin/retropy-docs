@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting started with retroPy"
-date: 2023-07-31 22:59:38 +0800
+date: 2030-07-31 22:59:38 +0800
 category: game-engine
 author: retrocat
 short-description: Getting started with retroPy
@@ -19,12 +19,13 @@ The retroPy hardware can be **breadboarded**, **soldered**, or purchased as a **
 
 ### Things you will need:
  1. If you've got your hands on a **retroPy console** or **made your own**, great! 
- 2. Ensure you have [Thonny](https://thonny.org/) (available on Windows/Mac/Linux) installed (Thonny installation guide here).
+ 2. Ensure you have [Thonny](https://thonny.org/) (available on Windows/Mac/Linux) installed ([Thonny installation guide here](https://respawnin.github.io/retropy-docs/game-engine/installing-thonny)).
 
 #### Let's get started!
 
 
-Plug in your retroPy console using a USB cable.
+Plug in your retroPy console using the provided USB cable (You'll need a micro-B USB if you're connecting to the Pico/ a USB c if you're connecting to the soldering kit.)
+
 Launch Thonny and make sure to select retroPy by clicking the bottom right hand corner, and selecting any MicroPython option
 
 ![Select retroPy MicroPython in Thonny](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-micropython.png)
@@ -48,8 +49,10 @@ Let's run the file to see what this code does.
 Press F5 or click on the green play button on the toolbar to run the code.
 
 #### Hello World!
-Getting "Hello World!" to display on the screen is as simple as 2 lines of code (Lines 7 & 8).
+
 ![retroPy Hello World Example](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/HelloWorld.png)
+
+Getting "Hello World!" to display on the screen is as simple as 2 lines of code (Lines 7 & 8).
 
 {% highlight python linenos %}
 from retroPy import rpy
@@ -66,9 +69,9 @@ def draw():
 rpy.run(update, draw)  
 {% endhighlight %}
 
-On ==line 7==, we'll need to clear the screen before we start drawing anything on it. Here, we're clearing the entire screen with colour index 1 (Dark Blue).
+On 	:yellow_square:line 7:yellow_square:, we'll need to clear the screen before we start drawing anything on it. Here, we're clearing the entire screen with colour index 1 (Dark Blue).
 
-On ==line 8==, we'll use the text command to indicate the string of text we want to display, its top left (X,Y) starting position, followed by the colour of the text (colour Index 7 is white).
+On 	:yellow_square:line 8:yellow_square:, we'll use the text command to indicate the string of text we want to display, its top left (X,Y) starting position, followed by the colour of the text (colour Index 7 is white).
 By default, the text is a monospace font of size 16x16 pixels.
 
 Other than lines 7 & 8, everything else is the bare minimum required for an empty project (A copy of it called `Empty.py` can be found in the retroPy directory).
@@ -91,9 +94,12 @@ rpy.filled_circle(50, 50, 12, 8)
 
 The `filled_circle` command takes 4 parameters -  `( radius, center-x, center-y, colour)`
 
+
+![Thonny Run and Stop Buttons](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-toolbar.png)
+
 Stop the current code that is running by clicking the stop/reset button.
 Now we can Press F5 to run the updated code/ click on the play button.
-![Thonny Run and Stop Buttons](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/thonny-toolbar.png)
+
 
 #### Displaying a sprite
 

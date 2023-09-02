@@ -21,7 +21,7 @@
 title: retropy Docs
 description: Documentation and API reference for the retroPy MicroPython retro game engine and rp2040 game consoles
 baseurl: #/retropy-docs # the subpath of your site, e.g. /support
-url: https://respawnin.github.io # the base hostname AND PROTOCOL for your site, e.g. http://example.com
+url: https://www.retropy.io # the base hostname AND PROTOCOL for your site, e.g. http://example.com
 permalink: /:categories/:title
 
 content_type: Docs #Define whether this is a knowledge base, help center, or something else

@@ -56,6 +56,9 @@ nav_item_three_link: #
 nav_button: Getting Started
 nav_button_link: https://respawnin.github.io/retropy-docs/
 
+nav_button: API Reference
+nav_button_link: https://respawnin.github.io/retropy-docs/
+
 # More Help
 help_one_title: retroPy Bugs
 help_one_content: If you find any bugs or problems with the documentation, please open an issue over on Github.
@@ -63,7 +66,7 @@ help_one_button: Github
 help_one_link: https://github.com/respawnin/retropy-docs/issues
 
 help_two_title: Twitter
-help_two_content: Feel free to tweet at me if you have suggestions for retroPy. Or if you just want to say hi.
+help_two_content: Feel free to drop us a tweet if you have suggestions for retroPy. Or if you just want to say hi.
 help_two_button: Twitter
 help_two_link: https://twitter.com/respawnin_
 

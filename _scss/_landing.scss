@@ -6,7 +6,8 @@
   background-image: url("../assets/retropy-docs_CAT_Desk.png");
   background-repeat: no-repeat;
   background-color: $primary-color;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: bottom;
   background-size: contain;
   min-height: 390px;
 }

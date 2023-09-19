@@ -13,7 +13,7 @@ While the core game engine is written in c and handled at the machine level to e
 
 To use the library, we'll need to import it and ensure we have the minimum basic setup as shown.
 
-{% highlight python linenos %}
+{% highlight python %}
 
 from retroPy import rpy
 
@@ -101,7 +101,7 @@ As an example, let's create a cat character and get it to appear in the bottom-l
 {% endhighlight %}
 We'll place that line into the basic setup like so.
 
-{% highlight python linenos %}
+{% highlight python  %}
 
 from retroPy import rpy, gameObj LoadSpriteStr
 from Assets import cat
@@ -138,35 +138,37 @@ You should see the cat on the screen with an idle animation like so.
 
 Example:
 {% highlight python  %}
-player.pos(0,0) #set the player position to coordinates (0,0)
+    #set the player position to coordinates (0,0)
+    player.pos(0,0) 
 {% endhighlight %}
 alternatively, 
 {% highlight python  %}
-player.pos_x = 0
-player.pos_y = 0
+    player.pos_x = 0
+    player.pos_y = 0
 {% endhighlight %}
 **mid_x, mid_y, bot_x, bot_y**  
 *Get/Set the middle (center point) or bottom (bottom right) position of the game object*
 
 Example:
 {% highlight python  %}
-player.mid_x = 7
-player.mid_y = 7
+    player.mid_x = 7
+    player.mid_y = 7
 
-player.bot_x = 15
-player.bot_y = 15
+    player.bot_x = 15
+    player.bot_y = 15
 {% endhighlight %}
 **speed(speed_x, speed_y), speed_x, speed_y** 
 *Get/Set the speed (pixels per second) of the game object along the x and y axis*
 
 Example:
 {% highlight python  %}
-player.speed(20,0)	#move the player to the right at a speed of 20
+    #move the player to the right at a speed of 20
+    player.speed(20,0)	
 {% endhighlight %}
 Alternatively,
 {% highlight python  %}
-player.speed_x = 20
-player.speed_y = 0
+    player.speed_x = 20
+    player.speed_y = 0
 {% endhighlight %}
 
 **acc(acc_x, acc_y), acc_x, acc_y** 
@@ -174,12 +176,13 @@ player.speed_y = 0
 
 Example:
 {% highlight python  %}
-player.acc(0,-10) #set an upward acceleration of 10
+    #set an upward acceleration of 10
+    player.acc(0,-10) 
 {% endhighlight %}
 Alternatively,
 {% highlight python  %}
-player.acc_x = 0
-player.acc_y = -10
+    player.acc_x = 0
+    player.acc_y = -10
 {% endhighlight %}
 
 **.dist(gameObj)**
@@ -187,16 +190,16 @@ player.acc_y = -10
 
 Example:
 {% highlight python  %}
-cat.dist(food)
+    cat.dist(food)
 {% endhighlight %}
 **.moveTowards(x, y, speed, dt)**
 *Move game object to a given coordinate at a given speed.* 
 
 Example:
 {% highlight python  %}
-def update(dt):
-    cat.moveTowards(food.pos_x, food.pos_y, 20, dt)
-    pass
+    def update(dt):
+        cat.moveTowards(food.pos_x, food.pos_y, 20, dt)
+        pass
 {% endhighlight %}
 
 **.bound(xmin, xmax, ymin, ymax)**
@@ -213,8 +216,8 @@ These are especially useful for changing sprite properties on the fly.
 
 Example:
 {% highlight python  %}
-if rpy.btnADown():
-    cat.sprite(p_cat_attack, 200)
+    if rpy.btnADown():
+        cat.sprite(p_cat_attack, 200)
 {% endhighlight %}
 
 
@@ -233,15 +236,15 @@ Flip Options:
  - 3 : flip sprite both horizontally and vertically
 
 Example use: Changing player walking direction, without needing separate sprites for each direction.
-{% highlight python linenos %}
-if rpy.btnRightDown():
-    cat.sprite(p_cat_run,200)
-    cat.speed_x = 30
-    cat.flip(0) #no flip. cat sprite is already facing right
-if rpy.btnLeftDown():
-    cat.sprite(p_cat_run,200)
-    cat.speed_x = -30
-    cat.flip(1) #flip sprite horizontally. In this case, from right to left
+{% highlight python  %}
+    if rpy.btnRightDown():
+        cat.sprite(p_cat_run,200)
+        cat.speed_x = 30
+        cat.flip(0) #no flip. cat sprite is already facing right
+    if rpy.btnLeftDown():
+        cat.sprite(p_cat_run,200)
+        cat.speed_x = -30
+        cat.flip(1) #flip sprite horizontally. In this case, from right to left
 {% endhighlight %}
 
 
@@ -300,22 +303,22 @@ Example use: AOE damage
 While drawing primitives is more costly and slower than drawing a sprite, they have their uses. 
 retroPy supports the following primitive draw functions.
 
-**.pixel(x, y, color)** 
+**.pixel(x, y, color)**
 *Draw a pixel at position x, y using a given colour*
 
 **.circle(x, y, radius, color)** 
 **.filled_circle(x, y, radius, color)**  
 *Draw an outline circle or filled circle given the center-point and radius.*
 
-**.line(x1, y1, x2, y2, color)** 
+**.line(x1, y1, x2, y2, color)**
 *Draw a line given the starting and ending x,y position*
 
 **.hline(x, y, length, color)** 
-**.vline(x, y, length, color)** 
+**.vline(x, y, length, color)**
 *Draw a horizontal/ vertical line given the starting x,y position and length of the line *
 
 **.rect(Rect, color)**
-**.filled_rect(Rect, color)** 
+**.filled_rect(Rect, color)**
 *Using the Rect class, draw an outline or filled rectangle.*
 
 Rect(x,y,width,length) - Built in class
@@ -348,6 +351,7 @@ Example:
 {% endhighlight %}
 
 **Full list below.**
+
 To get the button **Down** state, check the corresponding buttons in the update loop.
 
 **Directional Buttons:**

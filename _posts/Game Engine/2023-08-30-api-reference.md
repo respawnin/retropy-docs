@@ -138,35 +138,35 @@ You should see the cat on the screen with an idle animation like so.
 
 Example:
 {% highlight python  %}
-    player.pos(0,0) #set the player position to coordinates (0,0)
+player.pos(0,0) #set the player position to coordinates (0,0)
 {% endhighlight %}
 alternatively, 
 {% highlight python  %}
-    player.pos_x = 0
-    player.pos_y = 0
+player.pos_x = 0
+player.pos_y = 0
 {% endhighlight %}
 **mid_x, mid_y, bot_x, bot_y**  
 *Get/Set the middle (center point) or bottom (bottom right) position of the game object*
 
 Example:
 {% highlight python  %}
-    player.mid_x = 7
-    player.mid_y = 7
-    
-    player.bot_x = 15
-    player.bot_y = 15
+player.mid_x = 7
+player.mid_y = 7
+
+player.bot_x = 15
+player.bot_y = 15
 {% endhighlight %}
 **speed(speed_x, speed_y), speed_x, speed_y** 
 *Get/Set the speed (pixels per second) of the game object along the x and y axis*
 
 Example:
 {% highlight python  %}
-    player.speed(20,0)	#move the player to the right at a speed of 20
+player.speed(20,0)	#move the player to the right at a speed of 20
 {% endhighlight %}
 Alternatively,
 {% highlight python  %}
-    player.speed_x = 20
-    player.speed_y = 0
+player.speed_x = 20
+player.speed_y = 0
 {% endhighlight %}
 
 **acc(acc_x, acc_y), acc_x, acc_y** 
@@ -174,12 +174,12 @@ Alternatively,
 
 Example:
 {% highlight python  %}
-    player.acc(0,-10) #set an upward acceleration of 10
+player.acc(0,-10) #set an upward acceleration of 10
 {% endhighlight %}
 Alternatively,
 {% highlight python  %}
-    player.acc_x = 0
-    player.acc_y = -10
+player.acc_x = 0
+player.acc_y = -10
 {% endhighlight %}
 
 **.dist(gameObj)**
@@ -187,16 +187,16 @@ Alternatively,
 
 Example:
 {% highlight python  %}
-    cat.dist(food)
+cat.dist(food)
 {% endhighlight %}
 **.moveTowards(x, y, speed, dt)**
 *Move game object to a given coordinate at a given speed.* 
 
 Example:
 {% highlight python  %}
-    def update(dt):
-    	cat.moveTowards(food.pos_x, food.pos_y, 20, dt)
-    	pass
+def update(dt):
+    cat.moveTowards(food.pos_x, food.pos_y, 20, dt)
+    pass
 {% endhighlight %}
 
 **.bound(xmin, xmax, ymin, ymax)**
@@ -213,8 +213,8 @@ These are especially useful for changing sprite properties on the fly.
 
 Example:
 {% highlight python  %}
-    if rpy.btnADown():
-        cat.sprite(p_cat_attack, 200)
+if rpy.btnADown():
+    cat.sprite(p_cat_attack, 200)
 {% endhighlight %}
 
 
@@ -234,14 +234,14 @@ Flip Options:
 
 Example use: Changing player walking direction, without needing separate sprites for each direction.
 {% highlight python linenos %}
-    if rpy.btnRightDown():
-        cat.sprite(p_cat_run,200)
-        cat.speed_x = 30
-        cat.flip(0) #no flip. cat sprite is already facing right
-    if rpy.btnLeftDown():
-        cat.sprite(p_cat_run,200)
-        cat.speed_x = -30
-        cat.flip(1) #flip sprite horizontally. In this case, from right to left
+if rpy.btnRightDown():
+    cat.sprite(p_cat_run,200)
+    cat.speed_x = 30
+    cat.flip(0) #no flip. cat sprite is already facing right
+if rpy.btnLeftDown():
+    cat.sprite(p_cat_run,200)
+    cat.speed_x = -30
+    cat.flip(1) #flip sprite horizontally. In this case, from right to left
 {% endhighlight %}
 
 

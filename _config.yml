@@ -89,3 +89,5 @@ plugins:
 sass:
   sass_dir:          _scss
   style:            :compressed
+
+highlighter: rouge

@@ -8,35 +8,35 @@ short-description: A reference and guide to retroPy's API
 ---
 
 # retroPy's API reference
-
 While the core game engine is written in c and handled at the machine level to ensure a refresh rate of 50fps, we have exposed some key functions in micro-python as a library for user control and access.
 
 To use the library, we'll need to import it and ensure we have the minimum basic setup as shown.
 
 {% highlight python %}
 
-from retroPy import rpy
+    from retroPy import rpy
 
-def update(dt):
-	pass
+    def update(dt):
+        pass
 
-def draw():
-	pass
-#====================================================
-rpy.run(update, draw)
+    def draw():
+        pass
+    #==================================
+    rpy.run(update, draw)
 
 {% endhighlight %}
 
 
 ## The retroPy Game Engine Class
-.quitRun()
-.pauseRun()
-.resumeRun()
-.pauseTimer()
-.resumeTimer()
-.color_p(color)
-.color_palette(val)
-.color_reset()
+ - .quitRun() 
+ - .pauseRun() 
+ - .resumeRun() 
+ - .pauseTimer() 
+ - .resumeTimer()
+ - .color_p(color) 
+ - .color_palette(val) 
+ - .color_reset()
+
 
 
 ## Colour Palette

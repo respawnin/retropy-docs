@@ -27,6 +27,7 @@ rpy.run(update, draw)
 
 {% endhighlight %}
 
+
 ## The retroPy Game Engine Class
 .quitRun()
 .pauseRun()
@@ -36,6 +37,7 @@ rpy.run(update, draw)
 .color_p(color)
 .color_palette(val)
 .color_reset()
+
 
 ## Colour Palette
 By default, retroPy uses [PICO-8's 16 colour palette](https://lospec.com/palette-list/pico-8). Every number (0-15) represents a colour.
@@ -66,6 +68,7 @@ To load sprites stored in **python Sprite String** files
 {% endhighlight %}
 Where `Assets` is the folder name, and heart is the python file name (`heart.py`), followed by the variable named `heart`.
 > retroPy comes with standard assets for you to quickly get started. More on this here.
+
 
 
 ## Game Objects
@@ -130,10 +133,10 @@ You should see the cat on the screen with an idle animation like so.
 
 ## gameObj Members
 
-
- **.pos(pos_x, pos_y)**   
+**.pos(pos_x, pos_y)**   
 **.pos_x** 
 **.pos_y**
+
 *Get/ Set the (top left) position of the game object*
 
 Example:
@@ -146,6 +149,7 @@ alternatively,
     player.pos_x = 0
     player.pos_y = 0
 {% endhighlight %}
+
 **mid_x, mid_y, bot_x, bot_y**  
 *Get/Set the middle (center point) or bottom (bottom right) position of the game object*
 
@@ -157,7 +161,9 @@ Example:
     player.bot_x = 15
     player.bot_y = 15
 {% endhighlight %}
-**speed(speed_x, speed_y), speed_x, speed_y** 
+
+**speed(speed_x, speed_y), speed_x, speed_y**
+
 *Get/Set the speed (pixels per second) of the game object along the x and y axis*
 
 Example:
@@ -172,6 +178,7 @@ Alternatively,
 {% endhighlight %}
 
 **acc(acc_x, acc_y), acc_x, acc_y** 
+
 *Get/Set the acceleration of the game object along the x and y axis*
 
 Example:
@@ -185,14 +192,18 @@ Alternatively,
     player.acc_y = -10
 {% endhighlight %}
 
+
 **.dist(gameObj)**
+
 *Get distance in pixels from another game object* 
 
 Example:
 {% highlight python  %}
     cat.dist(food)
 {% endhighlight %}
+
 **.moveTowards(x, y, speed, dt)**
+
 *Move game object to a given coordinate at a given speed.* 
 
 Example:
@@ -202,16 +213,22 @@ Example:
         pass
 {% endhighlight %}
 
+
 **.bound(xmin, xmax, ymin, ymax)**
+
 **.bound_x(xmin, xmax)**
+
 **.bound_y(ymin, ymax)**
+
 *Set movement boundaries of game object. Game objects will not move past these boundaries.*
 
 ## Sprite-related gameObj members
 The following game object members are specific to the sprites used in the game object.
+
 These are especially useful for changing sprite properties on the fly. 
 
 **.sprite(ptr_Sprite, flip_duration)**
+
 *Set pointer to sprite to be used. *
 
 Example:
@@ -252,12 +269,13 @@ Example use: Changing player walking direction, without needing separate sprites
 *Sprite animation display mode*
 
 Mode Options:
-0 : (default) Continuous frame cycle animation
-1 : Cycle through animation frames once and disappears (Good for special effects eg. Explosions)
-2 : Cycle through animation frames once, stops animation at last frame 
+- 0 : (default) Continuous frame cycle animation
+- 1 : Cycle through animation frames once and disappears (Good for special effects eg. Explosions)
+- 2 : Cycle through animation frames once, stops animation at last frame 
 
 
 **.flipDuration(msec)**
+
 *Set how long(ms) to show each frame before showing the next frame in the animation (leave as 0 if sprite is static)* 
 
 ## Colliders in game objects
@@ -268,7 +286,7 @@ Colliders are useful for troubleshooting during the development process of the g
 *Draws a rectangle in a given colour to represent the collider. By default, the collider is the size of the sprite.* 
 
 Example:
-{% highlight python linenos %}
+{% highlight python  %}
     def draw():
         rpy.clear()
         cat.draw()
@@ -279,7 +297,7 @@ Example:
 *Returns True if the game object collided with another game object. * 
 
 Example:
-{% highlight python linenos %}
+{% highlight python  %}
     def update(dt):
         food.update(dt)
         cat.moveTowards(food.pos_x, food.pos_y, 20, dt)
@@ -293,28 +311,32 @@ Example:
 *Check if a point is inside the gameObj collider* 
 
 **.resizeCollider(x, y, w, h)**  
-*Resize the gameObj collider. *
+*Resize the gameObj collider.*
+
 Example use: AOE damage
  
 **.collider_xy(gameObj, x, y)**
+
 *Check if gameObj collides with another gameObj at position x,y*
 
 ## Drawing Primitives
 While drawing primitives is more costly and slower than drawing a sprite, they have their uses. 
+
 retroPy supports the following primitive draw functions.
 
 **.pixel(x, y, color)**
 *Draw a pixel at position x, y using a given colour*
 
-**.circle(x, y, radius, color)** 
-**.filled_circle(x, y, radius, color)**  
+**.circle(x, y, radius, color)**
+**.filled_circle(x, y, radius, color)**
 *Draw an outline circle or filled circle given the center-point and radius.*
 
 **.line(x1, y1, x2, y2, color)**
 *Draw a line given the starting and ending x,y position*
 
-**.hline(x, y, length, color)** 
+**.hline(x, y, length, color)**
 **.vline(x, y, length, color)**
+
 *Draw a horizontal/ vertical line given the starting x,y position and length of the line *
 
 **.rect(Rect, color)**
@@ -325,6 +347,7 @@ Rect(x,y,width,length) - Built in class
 
 **.text(string, x, y, color)**
 *Write text to screen at position x,y*
+
 By default, retroPy uses a monospace 16x16 font size. Position x,y is the top left starting position.
 
 
@@ -335,7 +358,7 @@ The retroPy game engine natively supports the handheld game console's 8 button i
 Obtaining the 2 states of a button press - Down & Up (release) is easy.
 
 Example:
-{% highlight python linenos %}
+{% highlight python  %}
     def update(dt):
         if rpy.btnRightDown():
             cat.sprite(p_cat_run,200)

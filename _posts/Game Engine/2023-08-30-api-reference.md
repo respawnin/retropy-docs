@@ -54,16 +54,16 @@ Images are stored in a 4-bit binary format.
 Sprites and animation frames are stored in strings of numbers (representing palette colours). 
 
 To load **rs4 sprites**, provide the file path to the rs4 file.
-
+{% highlight python  %}
     from retroPy import rpy, LoadSprite
     p_fire = LoadSprite("Assets/fire1.rs4") #<< rs4 file 
-
+{% endhighlight %}
 To load sprites stored in **python Sprite String** files
-
+{% highlight python  %}
     from retroPy import rpy, LoadSpriteStr
     from Assets import heart
     p_player = LoadSpriteStr(heart.heart) #<< python string file
-
+{% endhighlight %}
 Where `Assets` is the folder name, and heart is the python file name (`heart.py`), followed by the variable named `heart`.
 > retroPy comes with standard assets for you to quickly get started. More on this here.
 
@@ -81,9 +81,9 @@ retroPy natively supports game objects with the following:
 > This includes the characters, items, special effects and game terrains.
 
 To create a game object, we'll make use of the `gameObj` class like so.
-
+{% highlight python  %}
     player = gameObj(p_player, pos_x, pos_y, flip_duration, speed_x, speed_y)
-
+{% endhighlight %}
 The `gameObj` class requires a few things.
  - `p_player` -  pointer to where the sprite is
  - `pos_x`, `pos_y`  - starting x, y coordinates of the game object
@@ -96,9 +96,9 @@ The `gameObj` class requires a few things.
 >  3. Use in Update/Draw Loop
 
 As an example, let's create a cat character and get it to appear in the bottom-left of the screen.
-
+{% highlight python  %}
     cat = gameObj(p_cat, 10, 220, 200, 0, 0)
-
+{% endhighlight %}
 We'll place that line into the basic setup like so.
 
 {% highlight python linenos %}
@@ -137,67 +137,67 @@ You should see the cat on the screen with an idle animation like so.
 *Get/ Set the (top left) position of the game object*
 
 Example:
-
+{% highlight python  %}
     player.pos(0,0) #set the player position to coordinates (0,0)
-
+{% endhighlight %}
 alternatively, 
-
+{% highlight python  %}
     player.pos_x = 0
     player.pos_y = 0
-
+{% endhighlight %}
 **mid_x, mid_y, bot_x, bot_y**  
 *Get/Set the middle (center point) or bottom (bottom right) position of the game object*
 
 Example:
-
+{% highlight python  %}
     player.mid_x = 7
     player.mid_y = 7
     
     player.bot_x = 15
     player.bot_y = 15
-
+{% endhighlight %}
 **speed(speed_x, speed_y), speed_x, speed_y** 
 *Get/Set the speed (pixels per second) of the game object along the x and y axis*
 
 Example:
-
+{% highlight python  %}
     player.speed(20,0)	#move the player to the right at a speed of 20
-
+{% endhighlight %}
 Alternatively,
-
+{% highlight python  %}
     player.speed_x = 20
     player.speed_y = 0
-
+{% endhighlight %}
 
 **acc(acc_x, acc_y), acc_x, acc_y** 
 *Get/Set the acceleration of the game object along the x and y axis*
 
 Example:
-
+{% highlight python  %}
     player.acc(0,-10) #set an upward acceleration of 10
-
+{% endhighlight %}
 Alternatively,
-
+{% highlight python  %}
     player.acc_x = 0
     player.acc_y = -10
-
+{% endhighlight %}
 
 **.dist(gameObj)**
 *Get distance in pixels from another game object* 
 
 Example:
-
+{% highlight python  %}
     cat.dist(food)
-
+{% endhighlight %}
 **.moveTowards(x, y, speed, dt)**
 *Move game object to a given coordinate at a given speed.* 
 
 Example:
-
+{% highlight python  %}
     def update(dt):
     	cat.moveTowards(food.pos_x, food.pos_y, 20, dt)
     	pass
-
+{% endhighlight %}
 
 **.bound(xmin, xmax, ymin, ymax)**
 **.bound_x(xmin, xmax)**
@@ -212,10 +212,10 @@ These are especially useful for changing sprite properties on the fly.
 *Set pointer to sprite to be used. *
 
 Example:
-
+{% highlight python  %}
     if rpy.btnADown():
         cat.sprite(p_cat_attack, 200)
-
+{% endhighlight %}
 
 
 **.currNdx(ndx)** 
@@ -233,7 +233,7 @@ Flip Options:
  - 3 : flip sprite both horizontally and vertically
 
 Example use: Changing player walking direction, without needing separate sprites for each direction.
-
+{% highlight python linenos %}
     if rpy.btnRightDown():
         cat.sprite(p_cat_run,200)
         cat.speed_x = 30
@@ -242,7 +242,7 @@ Example use: Changing player walking direction, without needing separate sprites
         cat.sprite(p_cat_run,200)
         cat.speed_x = -30
         cat.flip(1) #flip sprite horizontally. In this case, from right to left
-
+{% endhighlight %}
 
 
 **.mode(val)** 
@@ -265,24 +265,24 @@ Colliders are useful for troubleshooting during the development process of the g
 *Draws a rectangle in a given colour to represent the collider. By default, the collider is the size of the sprite.* 
 
 Example:
-
+{% highlight python linenos %}
     def draw():
         rpy.clear()
         cat.draw()
         cat.drawCollider(3)
         pass
-
+{% endhighlight %}
 **.collider(gameObj)**  
 *Returns True if the game object collided with another game object. * 
 
 Example:
-
+{% highlight python linenos %}
     def update(dt):
         food.update(dt)
         cat.moveTowards(food.pos_x, food.pos_y, 20, dt)
         if cat.collider(food):
             print("Collide!")
-
+{% endhighlight %}
 **.colliderEx(gameObj)**  
 *Similar to collider with extra info* 
 
@@ -332,7 +332,7 @@ The retroPy game engine natively supports the handheld game console's 8 button i
 Obtaining the 2 states of a button press - Down & Up (release) is easy.
 
 Example:
-
+{% highlight python linenos %}
     def update(dt):
         if rpy.btnRightDown():
             cat.sprite(p_cat_run,200)
@@ -345,47 +345,47 @@ Example:
         if rpy.btnLeftUp() or rpy.btnRightUp():
             cat.sprite(p_cat,200) #set back to idle animation
             cat.speed_x = 0
-
+{% endhighlight %}
 
 **Full list below.**
 To get the button **Down** state, check the corresponding buttons in the update loop.
 
 **Directional Buttons:**
-
+{% highlight python  %}
     .btnUpDown()
     .btnDownDown()
     .btnLeftDown()
     .btnRightDown()
-
+{% endhighlight %}
 **Action Buttons:**
-
+{% highlight python  %}
     .btnADown()
     .btnBDown()
-
+{% endhighlight %}
 **Shoulder Trigger Buttons:**
-
+{% highlight python  %}
     .btnTrigLeftDown()
     .btnTrigRightDown()
-
+{% endhighlight %}
 
 Again, to check if the button is released and back Up, check for the button **Up** state.
 
 **Directional Buttons:**
-
+{% highlight python  %}
     .btnUpUp()
     .btnDownUp()
     .btnLeftUp()
     .btnRightUp()
-
+{% endhighlight %}
 **Action Buttons:**
-
+{% highlight python  %}
     .btnAUp()
     .btnBUp()
-
+{% endhighlight %}
 **Shoulder Trigger Buttons:**
-
+{% highlight python  %}
     .btnTrigLeftUp()
     .btnTrigRightUp()
-
+{% endhighlight %}
 
 

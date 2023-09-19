@@ -59,7 +59,11 @@ h6,
 p {
   margin: 0 0 $line-height;
   opacity: 1.0;
-  font-weight: 600;
+  font-weight: 300;
+}
+
+b, strong {
+  font-weight: bold;
 }
 
 a {
@@ -99,8 +103,8 @@ mark {
 
 // Blockquote
 blockquote {
-  border-left: $border-width-lg solid #9c9cd7;
-  background-color: #f0eff4;
+  border-left: $border-width-lg solid #8383d3;
+  background-color: #ceccd4;
   margin-left: 0;
   padding: $unit-2 $unit-4;
 

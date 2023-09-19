@@ -133,9 +133,9 @@ You should see the cat on the screen with an idle animation like so.
 
 ## gameObj Members
 
-**.pos(pos_x, pos_y)** 
-**.pos_x**
-**.pos_y**
+**.pos(pos_x, pos_y)**  
+**.pos_x**  
+**.pos_y**  
 *Get/ Set the (top left) position of the game object*
 
 Example:
@@ -161,7 +161,7 @@ Example:
     player.bot_y = 15
 {% endhighlight %}
 
-**speed(speed_x, speed_y), speed_x, speed_y**
+**speed(speed_x, speed_y), speed_x, speed_y**  
 *Get/Set the speed (pixels per second) of the game object along the x and y axis*
 
 Example:
@@ -175,7 +175,7 @@ Alternatively,
     player.speed_y = 0
 {% endhighlight %}
 
-**acc(acc_x, acc_y), acc_x, acc_y** 
+**acc(acc_x, acc_y), acc_x, acc_y**  
 *Get/Set the acceleration of the game object along the x and y axis*
 
 Example:
@@ -190,7 +190,7 @@ Alternatively,
 {% endhighlight %}
 
 
-**.dist(gameObj)**
+**.dist(gameObj)**  
 *Get distance in pixels from another game object* 
 
 Example:
@@ -198,7 +198,7 @@ Example:
     cat.dist(food)
 {% endhighlight %}
 
-**.moveTowards(x, y, speed, dt)**
+**.moveTowards(x, y, speed, dt)**  
 *Move game object to a given coordinate at a given speed.* 
 
 Example:
@@ -209,9 +209,9 @@ Example:
 {% endhighlight %}
 
 
-**.bound(xmin, xmax, ymin, ymax)**
-**.bound_x(xmin, xmax)**
-**.bound_y(ymin, ymax)**
+**.bound(xmin, xmax, ymin, ymax)**  
+**.bound_x(xmin, xmax)**  
+**.bound_y(ymin, ymax)**  
 *Set movement boundaries of game object. Game objects will not move past these boundaries.*
 
 ## Sprite-related gameObj members
@@ -219,7 +219,7 @@ The following game object members are specific to the sprites used in the game o
 
 These are especially useful for changing sprite properties on the fly. 
 
-**.sprite(ptr_Sprite, flip_duration)**
+**.sprite(ptr_Sprite, flip_duration)**  
 *Set pointer to sprite to be used.*
 
 Example:
@@ -229,7 +229,7 @@ Example:
 {% endhighlight %}
 
 
-**.currNdx(ndx)**
+**.currNdx(ndx)**  
 *Set current index of sprite to be used. Pick index frame from animation.*
 
 Example use: Ending off a moving sprite animation to a final static image. 
@@ -256,7 +256,7 @@ Example use: Changing player walking direction, without needing separate sprites
 {% endhighlight %}
 
 
-**.mode(val)** 
+**.mode(val)**  
 *Sprite animation display mode*
 
 Mode Options:
@@ -266,7 +266,7 @@ Mode Options:
 
 
 
-**.flipDuration(msec)**
+**.flipDuration(msec)**  
 *Set how long(ms) to show each frame before showing the next frame in the animation (leave as 0 if sprite is static)* 
 
 ## Colliders in game objects
@@ -308,35 +308,34 @@ Example:
 
 Example use: AOE damage
  
-**.collider_xy(gameObj, x, y)**
+**.collider_xy(gameObj, x, y)**  
 *Check if gameObj collides with another gameObj at position x,y*
 
 ## Drawing Primitives
 While drawing primitives is more costly and slower than drawing a sprite, they have their uses. 
 retroPy supports the following primitive draw functions.
 
-**.pixel(x, y, color)**
+**.pixel(x, y, color)**  
 *Draw a pixel at position x, y using a given colour*
 
-**.circle(x, y, radius, color)**
-**.filled_circle(x, y, radius, color)**
+**.circle(x, y, radius, color)**  
+**.filled_circle(x, y, radius, color)**  
 *Draw an outline circle or filled circle given the center-point and radius.*
 
-**.line(x1, y1, x2, y2, color)**
+**.line(x1, y1, x2, y2, color)**  
 *Draw a line given the starting and ending x,y position*
 
-**.hline(x, y, length, color)**
-**.vline(x, y, length, color)**
-
+**.hline(x, y, length, color)**  
+**.vline(x, y, length, color)**  
 *Draw a horizontal/ vertical line given the starting x,y position and length of the line *
 
-**.rect(Rect, color)**
-**.filled_rect(Rect, color)**
+**.rect(Rect, color)**  
+**.filled_rect(Rect, color)**  
 *Using the Rect class, draw an outline or filled rectangle.*
 
 Rect(x,y,width,length) - Built in class
 
-**.text(string, x, y, color)**
+**.text(string, x, y, color)**  
 *Write text to screen at position x,y*
 
 By default, retroPy uses a monospace 16x16 font size. Position x,y is the top left starting position.

@@ -1,5 +1,4 @@
-//@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Inconsolata:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 // Core variables
 $version: "0.5.8";
@@ -60,7 +59,7 @@ $cjk-jp-font-family: $base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic P
 $cjk-ko-font-family: $base-font-family, "Malgun Gothic", $fallback-font-family !default;
 $body-font-family: $base-font-family !default;
 
-$header-font-family: 'Cute Font', cursive !default;
+$header-font-family: 'Ubuntu Mono', monospace !default;
 
 // Unit sizes
 $unit-o: .05rem !default;

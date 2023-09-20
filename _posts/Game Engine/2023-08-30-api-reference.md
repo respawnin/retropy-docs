@@ -27,17 +27,27 @@ To use the library, we'll need to import it and ensure we have the minimum basic
 {% endhighlight %}
 
 
-## The retroPy Game Engine Class
+## The retroPy Game Engine Class (rPy)
  - .quitRun() 
  - .pauseRun() 
  - .resumeRun() 
  - .pauseTimer() 
  - .resumeTimer()
- - .color_p(color) 
- - .color_palette(val) 
- - .color_reset()
 
 
+**.clear(color)**
+*Clears the screen with an optional colour. By default, the value is 0 which is black.*
+
+Example:
+'''python
+    def draw():
+        rpy.clear()
+'''
+Alternatively:
+'''python
+    def draw():
+        rpy.clear(1) #fill the background with dark blue
+'''
 
 ## Colour Palette
 By default, retroPy uses [PICO-8's 16 colour palette](https://lospec.com/palette-list/pico-8). Every number (0-15) represents a colour.

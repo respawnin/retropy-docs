@@ -54,7 +54,7 @@ Press F5 or click on the green play button on the toolbar to run the code.
 
 Getting "Hello World!" to display on the screen is as simple as 2 lines of code (Lines 7 & 8).
 
-{% highlight python linenos %}
+{% highlight python %}
 from retroPy import rpy
 
 def update(dt):
@@ -86,7 +86,7 @@ Other than lines 7 & 8, everything else is the bare minimum required for an empt
 #### Let's draw a red ball!
 Add the following line under the `draw` function
 
-{% highlight python linenos %}
+{% highlight python %}
 
 rpy.filled_circle(50, 50, 12, 8)
 

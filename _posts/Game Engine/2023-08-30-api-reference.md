@@ -175,7 +175,9 @@ Example:
     player.bot_y = 15
 {% endhighlight %}
 
-**speed(speed_x, speed_y), speed_x, speed_y**  
+###### .speed(speed_x, speed_y)
+###### .speed_x
+###### .speed_y  
 *Get/Set the speed (pixels per second) of the game object along the x and y axis*
 
 Example:
@@ -189,7 +191,9 @@ Alternatively,
     player.speed_y = 0
 {% endhighlight %}
 
-**acc(acc_x, acc_y), acc_x, acc_y**  
+###### .acc(acc_x, acc_y)
+###### .acc_x 
+###### .acc_y  
 *Get/Set the acceleration of the game object along the x and y axis*
 
 Example:
@@ -204,7 +208,7 @@ Alternatively,
 {% endhighlight %}
 
 
-**.dist(gameObj)**  
+###### .dist(gameObj)  
 *Get distance in pixels from another game object* 
 
 Example:
@@ -212,7 +216,7 @@ Example:
     cat.dist(food)
 {% endhighlight %}
 
-**.moveTowards(x, y, speed, dt)**  
+###### .moveTowards(x, y, speed, dt)  
 *Move game object to a given coordinate at a given speed.* 
 
 Example:
@@ -223,9 +227,9 @@ Example:
 {% endhighlight %}
 
 
-**.bound(xmin, xmax, ymin, ymax)**  
-**.bound_x(xmin, xmax)**  
-**.bound_y(ymin, ymax)**  
+###### .bound(xmin, xmax, ymin, ymax)  
+###### .bound_x(xmin, xmax)  
+###### .bound_y(ymin, ymax)  
 *Set movement boundaries of game object. Game objects will not move past these boundaries.*
 
 ## Sprite-related gameObj members
@@ -233,7 +237,7 @@ The following game object members are specific to the sprites used in the game o
 
 These are especially useful for changing sprite properties on the fly. 
 
-**.sprite(ptr_Sprite, flip_duration)**  
+###### .sprite(ptr_Sprite, flip_duration)  
 *Set pointer to sprite to be used.*
 
 Example:
@@ -243,12 +247,12 @@ Example:
 {% endhighlight %}
 
 
-**.currNdx(ndx)**  
+###### .currNdx(ndx)  
 *Set current index of sprite to be used. Pick index frame from animation.*
 
 Example use: Ending off a moving sprite animation to a final static image. 
 
-**.flip(val)**  
+###### .flip(val)  
 *Flip sprite horizontally and/or vertically*
 
 Flip Options:
@@ -270,7 +274,7 @@ Example use: Changing player walking direction, without needing separate sprites
 {% endhighlight %}
 
 
-**.mode(val)**  
+###### .mode(val)  
 *Sprite animation display mode*
 
 Mode Options:
@@ -280,7 +284,7 @@ Mode Options:
 
 
 
-**.flipDuration(msec)**  
+###### .flipDuration(msec)  
 *Set how long(ms) to show each frame before showing the next frame in the animation (leave as 0 if sprite is static)* 
 
 ## Colliders in game objects

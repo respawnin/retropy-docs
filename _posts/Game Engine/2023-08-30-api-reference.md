@@ -62,7 +62,7 @@ retroPy supports 2 methods of storing and loading sprites.
 In the `Assets` folder, you will notice 2 types of sprites assets.
 - **.rs4 files** (Recommended for speed and memory efficiency)
 retroPy's own 4-bit retroSprite files.
-Images are stored in a 4-bit binary format. 
+Images are stored in a 4-bit colour format. 
 - **.py "Sprite String" files** (Slower and larger files)
 Sprites and animation frames are stored in strings of numbers (representing palette colours). 
 
@@ -71,7 +71,7 @@ To load **rs4 sprites**, provide the file path to the rs4 file.
     from retroPy import rpy, LoadSprite
     p_fire = LoadSprite("Assets/fire1.rs4") #<< rs4 file 
 {% endhighlight %}
-To load sprites stored in **python Sprite String** files
+To load sprites stored in **python Sprite String** files, import the .py file as a library.
 {% highlight python  %}
     from retroPy import rpy, LoadSpriteStr
     from Assets import heart
@@ -144,9 +144,9 @@ You should see the cat on the screen with an idle animation like so.
 
 ## gameObj Members
 
-**.pos(pos_x, pos_y)**  
-**.pos_x**  
-**.pos_y**  
+###### .pos(pos_x, pos_y)  
+###### .pos_x  
+###### .pos_y  
 *Get/ Set the (top left) position of the game object*
 
 Example:
@@ -160,7 +160,10 @@ alternatively,
     player.pos_y = 0
 {% endhighlight %}
 
-**mid_x, mid_y, bot_x, bot_y**  
+###### .mid_x  
+###### .mid_y  
+###### .bot_x  
+###### .bot_y  
 *Get/Set the middle (center point) or bottom (bottom right) position of the game object*
 
 Example:

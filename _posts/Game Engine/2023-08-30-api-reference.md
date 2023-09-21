@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "API Reference"
-date: 2023-09-21 02:22:22 +0800
+date: 2023-08-30 02:22:22 +0800
 category: game-engine
 author: retrocat
 short-description: A reference and guide to retroPy's API
@@ -28,15 +28,9 @@ To use the library, we'll need to import it and ensure we have the minimum basic
   
 
 
-## The retroPy Game Engine Class (rPy)
- - .quitRun() 
- - .pauseRun() 
- - .resumeRun() 
- - .pauseTimer() 
- - .resumeTimer()
+## retroPy `rpy` core members
 
-
-**.clear(color)**  
+###### .clear(color)  
 *Clears the screen with an optional colour. By default, the value is 0 which is black.*
 
 Example:
@@ -50,6 +44,22 @@ Alternatively:
         rpy.clear(1) #fill the background with dark blue
 ```
 
+###### .quitRun()  
+*Quits the run loop*
+
+###### .pauseRun()  
+*Pauses the run loop*
+
+###### .resumeRun()  
+*Resumes the run loop after a pause*
+
+###### .pauseTimer()  
+*Pauses game timer*
+
+###### .resumeTimer()  
+*Resumes game timer*
+
+
 ## Colour Palette
 By default, retroPy uses [PICO-8's 16 colour palette](https://lospec.com/palette-list/pico-8). Every number (0-15) represents a colour.
 ![retroPy's 16 colour palette](https://raw.githubusercontent.com/respawnin/retropy-docs/main/assets/basics/retropy-colour-palette.png)
@@ -60,10 +70,10 @@ By default, retroPy uses [PICO-8's 16 colour palette](https://lospec.com/palette
 retroPy supports 2 methods of storing and loading sprites.
 
 In the `Assets` folder, you will notice 2 types of sprites assets.
-- **.rs4 files** (Recommended for speed and memory efficiency)
+- ###### .rs4 files** (Recommended for speed and memory efficiency)
 retroPy's own 4-bit retroSprite files.
 Images are stored in a 4-bit colour format. 
-- **.py "Sprite String" files** (Slower and larger files)
+- ###### .py "Sprite String" files** (Slower and larger files)
 Sprites and animation frames are stored in strings of numbers (representing palette colours). 
 
 To load **rs4 sprites**, provide the file path to the rs4 file.
@@ -291,7 +301,7 @@ Mode Options:
 Colliders are useful for troubleshooting during the development process of the game, and for checking if the game objects have collided into other game objects like walls/ enemies/ items. Colliders are part of game objects.
 
 
-**.drawCollider(colour)**  
+###### .drawCollider(colour)  
 *Draws a rectangle in a given colour to represent the collider. By default, the collider is the size of the sprite.* 
 
 Example:
@@ -303,7 +313,7 @@ Example:
         pass
 {% endhighlight %}
 
-**.collider(gameObj)**  
+###### .collider(gameObj)  
 *Returns True if the game object collided with another game object.* 
 
 Example:
@@ -315,45 +325,45 @@ Example:
             print("Collide!")
 {% endhighlight %}
 
-**.colliderEx(gameObj)**  
+###### .colliderEx(gameObj)  
 *Similar to collider with extra info* 
 
-**.colliderPt(x, y)**  
+###### .colliderPt(x, y)  
 *Check if a point is inside the gameObj collider* 
 
-**.resizeCollider(x, y, w, h)**  
+###### .resizeCollider(x, y, w, h)  
 *Resize the gameObj collider.*
 
 Example use: AOE damage
  
-**.collider_xy(gameObj, x, y)**  
+###### .collider_xy(gameObj, x, y)  
 *Check if gameObj collides with another gameObj at position x,y*
 
 ## Drawing Primitives
 While drawing primitives is more costly and slower than drawing a sprite, they have their uses. 
 retroPy supports the following primitive draw functions.
 
-**.pixel(x, y, color)**  
+###### .pixel(x, y, color)  
 *Draw a pixel at position x, y using a given colour*
 
-**.circle(x, y, radius, color)**  
-**.filled_circle(x, y, radius, color)**  
+###### .circle(x, y, radius, color)  
+###### .filled_circle(x, y, radius, color)  
 *Draw an outline circle or filled circle given the center-point and radius.*
 
-**.line(x1, y1, x2, y2, color)**  
+###### .line(x1, y1, x2, y2, color)  
 *Draw a line given the starting and ending x,y position*
 
-**.hline(x, y, length, color)**  
-**.vline(x, y, length, color)**  
+###### .hline(x, y, length, color)  
+###### .vline(x, y, length, color)  
 *Draw a horizontal/ vertical line given the starting x,y position and length of the line*
 
-**.rect(Rect, color)**  
-**.filled_rect(Rect, color)**  
+###### .rect(Rect, color)  
+###### .filled_rect(Rect, color)  
 *Using the Rect class, draw an outline or filled rectangle.*
 
 Rect(x,y,width,length) - Built in class
 
-**.text(string, x, y, color)**  
+###### .text(string, x, y, color)  
 *Write text to screen at position x,y*
 
 By default, retroPy uses a monospace 16x16 font size. Position x,y is the top left starting position.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "retroPy - Apps & Utilities"
-date: 2023-09-021 00:00:00 +0800
+date: 2023-09-21 00:00:00 +0800
 category: apps
 author: retrocat
 short-description: An overview of the accompanying apps for the retroPy

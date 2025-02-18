@@ -58,7 +58,7 @@ h6,
 .h6 {
   border-width: medium;
   border-color: #cdcad5;
-  padding: 2px 4px;
+  padding: 2px 2px;
   border-radius: 4px;
   font-weight: bold;
   border-style: double;
@@ -69,7 +69,7 @@ h6,
 
 // Paragraphs
 p {
-  margin: 0 0 $line-height;
+  margin: 0 0 ; //$line-height
   opacity: 1.0;
   font-weight: 400;
 }

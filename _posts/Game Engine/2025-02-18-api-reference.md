@@ -55,7 +55,7 @@ Alternatively:
 *Write text to screen at position x,y with an optional specified colour and font type*
 ```python
     def Draw():
-        draw.text("Hello World",50,50,7) 
+        draw.text("Hello World",50,50,7,0) 
 ```
 By default, retroPy uses a monospace 8x8 font size. Position x,y is the top left starting position.
 
@@ -498,6 +498,7 @@ To read the state of any of the buttons, use the following. Returns bool True/Fa
 ###### .readTright
 
 To read the current value of the Joystick, use the following.
+
 **Joystick Values**
 ###### .readJS1
 ###### .readJS2

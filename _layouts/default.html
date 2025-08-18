@@ -7,14 +7,14 @@
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="keywords" content="retroPy, micro-python game engine, 2D games, microcontroller games, RP2040, RP2350, ST7789, Raspberry Pi Pico, pixel art games, embedded Python, game development, Python graphics, joystick input, game tutorials, API reference">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <link rel="stylesheet" href="/assets/css/ghost.css">
+  <link rel="stylesheet" href=""{{ site.baseurl }}/assets/css/ghost.css">
   <!--favicon-->
-  <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href=""{{ site.baseurl }}/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href=""{{ site.baseurl }}/assets/img/favicon/favicon.svg" />
+  <link rel="shortcut icon" href=""{{ site.baseurl }}/assets/img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href=""{{ site.baseurl }}/assets/img/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="retroPy" />
-  <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+  <link rel="manifest" href=""{{ site.baseurl }}/assets/img/favicon/site.webmanifest" />
   <!--favicon-->
 
   <!-- Primary Meta -->
@@ -28,13 +28,13 @@
   <meta property="og:title" content="retroPy Documentation">
   <meta property="og:description" content="Build retro-style 2D games with Python for microcontrollers. Full guides for RP2040, ST7789, and input devices.">
   <meta property="og:url" content="https://www.retropy.io/docs/">
-  <meta property="og:image" content="/assets/img/preview.png">
+  <meta property="og:image" content=""{{ site.baseurl }}/assets/img/preview.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="retroPy Documentation">
   <meta name="twitter:description" content="A Python-powered game engine for RP2040 and retro displays. Explore tutorials, examples, and API docs.">
-  <meta name="twitter:image" content="/assets/img/preview.png">
+  <meta name="twitter:image" content=""{{ site.baseurl }}/assets/img/preview.png">
 
 </head>
 <body>
@@ -42,7 +42,7 @@
     <!-- Banner -->
     <div class="banner">
       <a href="/" aria-label="Go to home page">
-        <img src="/assets/img/retroPy.png" alt="retroPy Banner" />
+        <img src=""{{ site.baseurl }}/assets/img/retroPy.png" alt="retroPy Banner" />
       </a>
     </div>
 
@@ -67,7 +67,7 @@
           </div>
           <div class="portrait" tabindex="0">
             <canvas class="smoke-canvas"></canvas>
-            <img src="/assets/img/glitchi_b1.png" alt="retroPy's glitchi" />
+            <img src="{{ site.baseurl }}/assets/img/glitchi_b1.png" alt="retroPy's glitchi" />
           </div>
         
           <div class="bottom-row">
@@ -93,6 +93,6 @@
     </div>
   </div>
 
-  <script src="/assets/js/ghost.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/ghost.js"></script>
 </body>
 </html>

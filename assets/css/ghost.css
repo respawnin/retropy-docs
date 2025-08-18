@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @font-face {
   font-family: 'ListenHereMiss';
-  src: url('../fonts/ListenHereMiss.ttf') format('truetype');
+  src: url('{{ site.baseurl }}/assets/fonts/ListenHereMiss.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'decterm';
-  src: url('../fonts/decterm.ttf') format('truetype');
+  src: url('{{ site.baseurl }}/assets/fonts/decterm.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-size: 1.2em;

@@ -80,8 +80,8 @@
         <nav class="options" aria-label="Main navigation options">
           <ul>
             {% assign md_pages = site.pages | where: "extname", ".md" | reject: "name", "index.md" %}
-            {% for p in md_pages %}
-              <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title | default: p.name | replace: '.md','' }}</a></li>
+            {% for doc in site.docs %}
+              <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title | default: doc.name }}</a></li>
             {% endfor %}
           </ul>
         </nav>

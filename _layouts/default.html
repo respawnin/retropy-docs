@@ -1,15 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="keywords" content="retroPy, micro-python game engine, 2D games, microcontroller games, RP2040, RP2350, ST7789, Raspberry Pi Pico, pixel art games, embedded Python, game development, Python graphics, joystick input, game tutorials, API reference">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="/assets/css/ghost.css">
+  <!--favicon-->
+  <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="retroPy" />
+  <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+  <!--favicon-->
 
-  {% include head.html %}
+  <!-- Primary Meta -->
+  <meta name="title" content="retroPy Documentation">
+  <meta name="description" content="Official retroPy documentation — A Python game engine for RP2040 microcontrollers, ST7789 displays, buttons, joysticks, and more.">
+  <meta name="keywords" content="retroPy, Python game engine, 2D games, microcontroller games, RP2040, ST7789, Raspberry Pi Pico, pixel art games, embedded Python, game development, Python graphics, joystick input, game tutorials, API reference">
+  <meta name="author" content="retroPy peeps feat glitchi">
 
-  <body>
-    {{ content }}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="retroPy Documentation">
+  <meta property="og:description" content="Build retro-style 2D games with Python for microcontrollers. Full guides for RP2040, ST7789, and input devices.">
+  <meta property="og:url" content="https://www.retropy.io/docs/">
+  <meta property="og:image" content="/assets/img/preview.png">
 
-    {% include footer.html %}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="retroPy Documentation">
+  <meta name="twitter:description" content="A Python-powered game engine for RP2040 and retro displays. Explore tutorials, examples, and API docs.">
+  <meta name="twitter:image" content="/assets/img/preview.png">
 
-    <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
-    <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
-    
-  </body>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Banner -->
+    <div class="banner">
+      <a href="/" aria-label="Go to home page">
+        <img src="/assets/img/retroPy.png" alt="retroPy Banner" />
+      </a>
+    </div>
+
+
+    <div class="container">
+
+      <!-- News -->
+      <div class="news" aria-label="Latest news ticker">
+        <div class="news-text">
+          👻 Latest: retroPy alpha v1.01 released | Awaken pixel spirits. Code the unknown. Forge retro worlds. |
+        </div>
+      </div>
+
+      <!-- Main layout row -->
+      <div class="main-content">
+
+
+        <div class="text-section">
+
+          <div class="dialogue-box" id="dialogue-box" aria-live="polite" tabindex="0">
+            <span class="cursor">|</span>
+          </div>
+          <div class="portrait" tabindex="0">
+            <canvas class="smoke-canvas"></canvas>
+            <img src="/assets/img/glitchi_b1.png" alt="retroPy's glitchi" />
+          </div>
+        
+          <div class="bottom-row">
+            <div class="description-box">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+
+        <nav class="options" aria-label="Main navigation options">
+          <ul>
+            {% assign md_pages = site.pages | where_exp: "p", "p.path contains '.md' and p.name != 'index.md'" %}
+            {% for p in md_pages %}
+              <li><a href="{{ p.url }}">{{ p.title | default: p.name | replace: '.md','' }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="socials">
+      {% include social-icons.html %}
+    </div>
+  </div>
+
+  <script src="/assets/js/ghost.js"></script>
+</body>
 </html>

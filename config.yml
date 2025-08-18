@@ -1,0 +1,10 @@
+theme: rPy-ghost-docs
+markdown: kramdown
+collections:
+  docs:
+    output: true
+    permalink: /docs/:name
+title: retroPy Documentation
+description: Official retroPy Documentation — A lightweight micro-Python game engine for microcontrollers. Includes tutorials, hardware guides, and full API reference.
+url: "https://www.retropy.io/docs"
+permalink: /:categories/:title/

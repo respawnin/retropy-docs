@@ -27,7 +27,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="retroPy Documentation">
   <meta property="og:description" content="Build retro-style 2D games with Python for microcontrollers. Full guides for RP2040, ST7789, and input devices.">
-  <meta property="og:url" content="https://www.retropy.io/docs/">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
   <meta property="og:image" content="{{ site.baseurl }}/assets/img/preview.png">
 
   <!-- Twitter -->
@@ -41,7 +41,7 @@
   <div class="wrapper">
     <!-- Banner -->
     <div class="banner">
-      <a href="/" aria-label="Go to home page">
+      <a href="{{ site.baseurl }}/" aria-label="Go to home page">
         <img src="{{ site.baseurl }}/assets/img/retroPy.png" alt="retroPy Banner" />
       </a>
     </div>
@@ -81,7 +81,7 @@
           <ul>
             {% assign md_pages = site.pages | where: "extname", ".md" | reject: "name", "index.md" %}
             {% for p in md_pages %}
-              <li><a href="{{ p.url }}">{{ p.title | default: p.name | replace: '.md','' }}</a></li>
+              <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title | default: p.name | replace: '.md','' }}</a></li>
             {% endfor %}
           </ul>
         </nav>

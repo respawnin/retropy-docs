@@ -81,7 +81,7 @@
           <ul>
             {% assign md_pages = site.pages | where_exp: "p", "p.path contains '.md'" | where_exp: "p", "p.name != 'index.md'" %}
             {% for p in md_pages %}
-              <li><a href="{{ p.url }}">{{ p.title | default: p.name | replace: '.md','' }}</a></li>
+              <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title | default: p.name | replace: '.md','' }}</a></li>
             {% endfor %}
           </ul>
         </nav>

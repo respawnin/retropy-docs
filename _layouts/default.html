@@ -79,7 +79,8 @@
 
         <nav class="options" aria-label="Main navigation options">
           <ul>
-            {% assign md_pages = site.pages | where: "extname", ".md" | reject: "name", "index.md" %}
+            {% assign md_pages = site.pages 
+              | where_exp: "p", "p.path ends_with: '.md' and p.name != 'index.md'" %}
             {% for p in md_pages %}
               <li><a href="{{ p.url }}">{{ p.title | default: p.name | replace: '.md','' }}</a></li>
             {% endfor %}

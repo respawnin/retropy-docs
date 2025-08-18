@@ -8,4 +8,4 @@ title: retroPy Documentation
 description: Official retroPy Documentation — A lightweight micro-Python game engine for microcontrollers. Includes tutorials, hardware guides, and full API reference.
 url: "https://respawnin.github.io"
 baseurl: "/retropy-docs"
-permalink: /:categories/:title/
+

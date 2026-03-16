@@ -200,9 +200,128 @@ body {
   padding: 24px;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: #fff;
+  color: #cfcfcf;
   overflow-y: auto;
   min-height: 900px;
+}
+
+.description-box strong,
+.description-box b,
+.description-box h1,
+.description-box h2,
+.description-box h3,
+.description-box h4 {
+  color: #fff;
+  line-height: 1.3;
+}
+
+.description-box h1 {
+  margin: 0 0 1.25rem;
+}
+
+.description-box h2,
+.description-box h3,
+.description-box h4 {
+  margin: 2rem 0 1rem;
+}
+
+.description-box h1:first-child,
+.description-box h2:first-child,
+.description-box h3:first-child,
+.description-box h4:first-child {
+  margin-top: 0;
+}
+
+.description-box ul,
+.description-box ol {
+  padding-left: 1.75rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.description-box li {
+  margin: 0.2rem 0;
+}
+
+.description-box a {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(143, 0, 255, 0.35);
+  padding: 0 0.2rem;
+  border-radius: 2px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.description-box a:hover,
+.description-box a:focus {
+  background: rgba(143, 0, 255, 0.6);
+  box-shadow: 0 0 8px rgba(143, 0, 255, 0.65);
+  outline: none;
+}
+
+.description-box .code-block {
+  position: relative;
+  margin: 1.25rem 0;
+  padding-top: 2.75rem;
+  background: #090909;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.description-box .code-copy-button {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid #fff;
+  background: #1a1a1a;
+  color: #fff;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.description-box .code-copy-button:hover,
+.description-box .code-copy-button:focus {
+  background: #2a2a2a;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.description-box pre {
+  margin: 0;
+  padding: 1rem 1.1rem 1.1rem;
+  overflow-x: auto;
+  background: transparent;
+  color: #fff;
+}
+
+.description-box code {
+  color: #fff;
+}
+
+.description-box p code,
+.description-box li code,
+.description-box td code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+}
+
+.description-box blockquote {
+  margin: 1.25rem 0 1.25rem 1rem;
+  padding: 0.1rem 0 0.1rem 1rem;
+  border-left: 4px solid #8f00ff;
+  color: #e3e3e3;
+}
+
+.description-box blockquote p {
+  white-space: pre-line;
+}
+
+.description-box blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 nav.options {

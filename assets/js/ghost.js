@@ -23,6 +23,52 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = -1;
   let typingIndex = 0;
 
+  function setupCodeBlocks() {
+    const codeBlocks = document.querySelectorAll('.description-box pre');
+
+    codeBlocks.forEach((pre) => {
+      const languageContainer = pre.closest('[class*="language-"]');
+
+      if (!languageContainer || languageContainer.classList.contains('language-plaintext')) {
+        return;
+      }
+
+      if (pre.parentElement && pre.parentElement.classList.contains('code-block')) {
+        return;
+      }
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'code-block';
+
+      const button = document.createElement('button');
+      button.className = 'code-copy-button';
+      button.type = 'button';
+      button.textContent = 'Copy';
+      button.setAttribute('aria-label', 'Copy code to clipboard');
+
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(button);
+      wrapper.appendChild(pre);
+
+      button.addEventListener('click', async () => {
+        const code = pre.innerText;
+
+        try {
+          await navigator.clipboard.writeText(code);
+          button.textContent = 'Copied';
+          setTimeout(() => {
+            button.textContent = 'Copy';
+          }, 1500);
+        } catch (error) {
+          button.textContent = 'Failed';
+          setTimeout(() => {
+            button.textContent = 'Copy';
+          }, 1500);
+        }
+      });
+    });
+  }
+
   function getNextLine() {
     let newIndex;
     do {
@@ -65,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Start dialogue
   refreshDialogue();
+  setupCodeBlocks();
 
   // --- SMOKE PARTICLES ---
   if (canvas) {

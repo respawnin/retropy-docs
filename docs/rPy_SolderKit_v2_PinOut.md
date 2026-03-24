@@ -1,6 +1,6 @@
 ---
 layout: default
-title: [Solder Kit] PinOut
+title:  .:[SolderKit]:. PinOut
 ---
 
 ## retroPy Console (Solder Kit v2) — RP2040-Zero PinOut

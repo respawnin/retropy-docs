@@ -1,12 +1,12 @@
 ---
 layout: default
-title: retroPy Solder Kit PinOut
+title: [Solder Kit] PinOut
 ---
 
 ## retroPy Console (Solder Kit v2) — RP2040-Zero PinOut
 The following diagram outlines how each GPIO on the RP2040-Zero is assigned within the retroPy console, covering screen interface, controls, audio, and system functions.
 
-![retroPy Soldering Kit v2](https://github.com/respawnin/retropy-docs/blob/main/assets/basics/retroPy-SolderKit_V2.PNG?raw=true)
+![retroPy Soldering Kit v2](https://github.com/respawnin/retropy-docs/blob/main/assets/basics/retroPy-SolderKit_V2.png?raw=true)
 
 
 ```text

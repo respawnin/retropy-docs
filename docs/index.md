@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Documentation Index
+description: Browse the retroPy documentation index for getting started guides, hardware references, and module documentation.
 ---
 
 ## 📚 Documentation Index

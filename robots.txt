@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://respawnin.github.io/retropy-docs/sitemap.xml

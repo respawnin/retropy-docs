@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% assign seo_title = page.title | default: site.title %}
+  {% assign seo_description = page.description | default: site.description %}
+  {% assign seo_url = page.url | absolute_url %}
+  {% assign seo_image = '/assets/img/retropy-docs.png' | absolute_url %}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  <title>{{ seo_title }}</title>
+  <meta name="description" content="{{ seo_description }}">
   <meta name="keywords" content="retroPy, micro-python game engine, 2D games, microcontroller games, RP2040, RP2350, ST7789, Raspberry Pi Pico, pixel art games, embedded Python, game development, Python graphics, joystick input, game tutorials, API reference">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta name="author" content="retroPy" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="canonical" href="{{ seo_url }}">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ghost.css">
   <!--favicon-->
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
@@ -17,24 +24,32 @@
   <link rel="manifest" href="{{ site.baseurl }}/assets/img/favicon/site.webmanifest" />
   <!--favicon-->
 
-  <!-- Primary Meta -->
-  <meta name="title" content="retroPy Documentation">
-  <meta name="description" content="Official retroPy documentation — A Python game engine for RP2040 microcontrollers, ST7789 displays, buttons, joysticks, and more.">
-  <meta name="keywords" content="retroPy, Python game engine, 2D games, microcontroller games, RP2040, ST7789, Raspberry Pi Pico, pixel art games, embedded Python, game development, Python graphics, joystick input, game tutorials, API reference">
-  <meta name="author" content="retroPy peeps feat glitchi">
+  <meta name="title" content="{{ seo_title }}">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="retroPy Documentation">
-  <meta property="og:description" content="Build retro-style 2D games with Python for microcontrollers. Full guides for RP2040, ST7789, and input devices.">
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
-  <meta property="og:image" content="{{ site.baseurl }}/assets/img/preview.png">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ seo_title }}">
+  <meta property="og:description" content="{{ seo_description }}">
+  <meta property="og:url" content="{{ seo_url }}">
+  <meta property="og:image" content="{{ seo_image }}">
+  <meta property="og:image:alt" content="retroPy documentation preview">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="retroPy Documentation">
-  <meta name="twitter:description" content="A Python-powered game engine for RP2040 and retro displays. Explore tutorials, examples, and API docs.">
-  <meta name="twitter:image" content="{{ site.baseurl }}/assets/img/preview.png">
+  <meta name="twitter:title" content="{{ seo_title }}">
+  <meta name="twitter:description" content="{{ seo_description }}">
+  <meta name="twitter:image" content="{{ seo_image }}">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "url": {{ site.url | append: site.baseurl | append: '/' | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "image": {{ seo_image | jsonify }}
+    }
+  </script>
 
 </head>
 <body>

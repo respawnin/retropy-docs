@@ -6,6 +6,9 @@ description: Official retroPy Documentation — A lightweight micro-Python game 
 url: "https://respawnin.github.io"
 baseurl: "/retropy-docs"
 
+plugins:
+  - jekyll-sitemap
+  
 collections:
   docs:
     output: true
